@@ -2,7 +2,7 @@
 
 This is a multimodal RAG chatbot that can answer queries based on knowledge derived from documents in various formats like TXT, PDF, DOCX, PPTX, etc. 
 
-### What Is RAG
+### What Is RAG?
 
 RAG stands for Retrieval-Augmented Generation. It involves augmenting an LLM's existing knowledge with supplementary information retrieved from documents. Instead of loading the entire documents (which may be very large) into the LLM's context window, only the relevant parts are retrieved and used to answer the user's query.
 
