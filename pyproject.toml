@@ -1,0 +1,19 @@
+[project]
+name = "rag-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.2.10",
+    "langchain-anthropic>=1.3.3",
+    "langchain-chroma>=1.1.0",
+    "langchain-community>=0.4.1",
+    "langchain-google-genai>=4.2.1",
+    "langchain-openai>=1.1.9",
+    "langchain-text-splitters>=1.1.0",
+    "langchain-voyageai>=0.3.2",
+    "python-dotenv>=1.2.1",
+    "unstructured[all-docs]>=0.20.8",
+    "voyageai>=0.3.7",
+]
