@@ -139,3 +139,10 @@ uv run retrieval_with_memory_persist.py
   - Summarisation: After every k interactions, summarise the older messages (eg. older half). Delete them and only keep the summary for the older messages. This preserves context and uses fewer tokens, but it also creates an overhead since we need to pass a portion of the chat history to Gemini and wait for its response. However, this is more efficient as we only do this once we hit k interactions.
   - Vectorisation: Store older messages in a vector DB and retrieve only top k relevant messages based on the user's query. Efficient but more complex as we need two maintain two vectors DBs (one for docs, one for chat history), and it also creates an overhead since we need to retrieve relevant chunks at the beginning of the interaction and also embed & store the response in the vector DB at the end of the interaction.
 - For the multimodal RAG chatbot, chat history limit was implemented using the summarisation technique. After 10 interactions, the older half of the conversation is summarised and the raw messages are deleted, with only the summary being stored. Thereafter, this continues every 5 interactions. This ensures that no more than 10 interactions (i.e. 20 messages) plus the summary are stored in the chat history at the same time. Thus, we remain well within bounds of the context window limit (1M tokens).
+
+### Future Scope
+
+- More advanced text splitters
+- Reranking
+- Multimodal embedding modals (Google [just announced](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/) Gemini Embedding 2, their first multimodal embedding model, on 10th March 2026)
+- Support more file types (eg. XLSX)
